@@ -1,0 +1,70 @@
+[
+  {
+    "id": "557bab49-aedf-4fe2-b448-773618ff5b7f",
+    "createdAt": "2026-09-24T20:05:00.034Z",
+    "status": "pending_review",
+    "prUrl": null,
+    "issueUrl": null,
+    "repo": "httpfacts/AI-BankApp-DevOps",
+    "provider": "github",
+    "verdict": "ESCALATE_TO_HUMAN",
+    "risk": 0.79,
+    "summary": "Suggested fix for trivy.yaml",
+    "files": [
+      {
+        "file": "trivy.yaml"
+      }
+    ]
+  },
+  {
+    "id": "aa7476ac-537f-4d90-9f81-969c26a90109",
+    "createdAt": "2026-09-24T20:02:45.073Z",
+    "status": "pending_review",
+    "prUrl": null,
+    "issueUrl": null,
+    "repo": "httpfacts/AI-BankApp-DevOps",
+    "provider": "github",
+    "verdict": "ESCALATE_TO_HUMAN",
+    "risk": 0.79,
+    "summary": "Suggested fix for Dockerfile",
+    "files": [
+      {
+        "file": "Dockerfile"
+      }
+    ]
+  },
+  {
+    "id": "d550afae-835b-4f81-b888-56a49b44fafe",
+    "createdAt": "2026-09-24T20:02:13.760Z",
+    "status": "pending_review",
+    "prUrl": null,
+    "issueUrl": null,
+    "repo": "httpfacts/AI-BankApp-DevOps",
+    "provider": "github",
+    "verdict": "ESCALATE_TO_HUMAN",
+    "risk": 0.79,
+    "summary": "Suggested fix for build.yml",
+    "files": [
+      {
+        "file": ".github/workflows/build.yml"
+      }
+    ]
+  },
+  {
+    "id": "f0f8cd5d-2f07-4f3c-984e-74daf2491dca",
+    "createdAt": "2026-09-24T20:01:21.605Z",
+    "status": "pending_review",
+    "prUrl": null,
+    "issueUrl": null,
+    "repo": "httpfacts/AI-BankApp-DevOps",
+    "provider": "github",
+    "verdict": "ESCALATE_TO_HUMAN",
+    "risk": 0.79,
+    "summary": "Suggested fix for build.yml",
+    "files": [
+      {
+        "file": ".github/workflows/build.yml"
+      }
+    ]
+  }
+]

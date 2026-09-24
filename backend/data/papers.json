@@ -1,0 +1,33 @@
+{
+  "anchor": {
+    "citation": "Barnes, Ghaleb & Hassan (2026)",
+    "role": "Names the gap",
+    "summary": "A 2026 survey of agentic CI/CD that identifies 'authority transfer' — how much operational control you hand an AI agent — as the open, unsolved problem in this space, and states that no explicit boundary or benchmark for it exists yet."
+  },
+  "corePapers": [
+    {
+      "citation": "LogSage (Xu et al., 2025)",
+      "role": "Baseline: fix-generation works at scale",
+      "summary": "Industrial-scale proof this category of tool works: ran on 1M+ real ByteDance pipeline runs with over 80% precision. Does not distinguish file risk."
+    },
+    {
+      "citation": "RepairAgent (Bouzenia et al., 2025)",
+      "role": "Baseline: agentic investigation",
+      "summary": "Treats the LLM as an agent that investigates a bug using tools, not just a single-shot patch generator. Same blind spot: no concept of file risk."
+    },
+    {
+      "citation": "Repairnator (Monperrus et al., 2019)",
+      "role": "Proof the risk is real, not hypothetical",
+      "summary": "A real bot that watched GitHub CI builds and got patches merged by humans — some of whom didn't know it was a bot. Shows autonomous agents already have real merge power with zero classification of what they're allowed to touch."
+    },
+    {
+      "citation": "AutoGuard (Anugula et al., 2025)",
+      "role": "Closest existing attempt",
+      "summary": "A self-healing layer for DevSecOps pipelines, but narrow (security anomalies only) and driven by a learned reinforcement-learning policy rather than a declarative, auditable rule."
+    }
+  ],
+  "supportingCluster": {
+    "role": "Grounds the HOW, not the WHAT/WHY",
+    "summary": "Twelve additional sources on trust calibration, human-AI collaboration, policy-as-code, and infrastructure security. Not CI/CD-specific — they justify design choices like confidence-based routing, keeping a human in the loop, and using declarative policy instead of a black-box model."
+  }
+}

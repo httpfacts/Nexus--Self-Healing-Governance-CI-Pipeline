@@ -1,0 +1,23 @@
+{
+  "name": "nexus-backend",
+  "version": "1.0.0",
+  "description": "Backend API for the NEXUS project showcase site",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.113.0",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "@modelcontextprotocol/server-github": "^2025.4.8",
+    "@octokit/rest": "^22.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^17.4.2",
+    "express": "^4.19.2",
+    "express-session": "^1.19.0",
+    "js-yaml": "^4.1.0",
+    "jsonwebtoken": "^9.0.3"
+  }
+}

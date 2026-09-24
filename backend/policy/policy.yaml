@@ -1,0 +1,47 @@
+# NEXUS example policy file
+# This is the kind of declarative, human-readable rule set that NEXUS
+# uses to decide what an AI fix-generator is allowed to auto-merge.
+#
+# The core idea: classification happens on the WHOLE proposed changeset.
+# If ANY touched file matches a control-plane pattern, the ENTIRE change
+# is escalated to a human — no partial auto-merge (see "Curveball 1" in
+# the review notes for the reasoning).
+
+control_plane:
+  description: >
+    Files that affect WHO is allowed to do WHAT. A change here can silently
+    alter approval gates, permissions, or trust boundaries. Always escalate
+    to a human reviewer.
+  patterns:
+    - "**/.github/workflows/**"
+    - "**/*.workflow.yml"
+    - "**/*.workflow.yaml"
+    - "**/secrets/**"
+    - "**/*.secret*"
+    - "**/branch-protection*"
+    - "**/CODEOWNERS"
+    - "**/iam/**"
+    - "**/*policy*.json"
+    - "**/environments/**/protection*"
+    - "**/deploy-approval*"
+
+data_plane:
+  description: >
+    Files that affect HOW the app runs, not who can approve changes.
+    Safe for the AI to auto-propose (and, depending on team settings,
+    auto-merge) a fix.
+  patterns:
+    - "**/*.test.*"
+    - "**/tests/**"
+    - "**/Dockerfile"
+    - "**/src/**"
+    - "**/*.py"
+    - "**/*.js"
+    - "**/*.ts"
+    - "**/config/app*.yaml"
+
+default_action: escalate_to_human
+# If a file matches neither list explicitly, NEXUS defaults to the
+# safe choice: treat it as control-plane-equivalent and escalate. This
+# mirrors the "conservative default" principle used in policy-as-code
+# design more broadly.
